@@ -7,15 +7,16 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody2D heroBody;
     public float moveForce = 100;
+    public float jumpForce = 500;
     private float fInput = 0.0f;
     public float maxSpead = 5;
     private bool bFaceRight = true;
-    //private bool bGrounded = false;
-    //Transform mGroundCheck;
+    private bool bGrounded = false;
+    Transform mGroundCheck;
     void Start()
     {
         heroBody = GetComponent<Rigidbody2D>();
-        //mGroundCheck = transform.Find("GroundCheck");
+        mGroundCheck = transform.Find("GroundCheck");
     }
     // Update is called once per frame
     void Update()
@@ -25,7 +26,7 @@ public class PlayerControl : MonoBehaviour
             flip();
         else if (fInput > 0 && !bFaceRight)
             flip();
-        //Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        bGrounded = Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
     }
     private void FixedUpdate()
     {
@@ -33,6 +34,14 @@ public class PlayerControl : MonoBehaviour
             heroBody.AddForce(Vector2.right * fInput * moveForce);
         if (Mathf.Abs(heroBody.velocity.x) > maxSpead)
             heroBody.velocity = new Vector2 (Mathf.Sign(heroBody.velocity.x) * maxSpead,heroBody.velocity.y);
+        bool bJump = false;
+        if(bGrounded)
+        {
+            bJump = Input.GetKeyDown(KeyCode.Space);
+            Vector2 upForce = new Vector2(0, 1);
+            if(bJump)
+                heroBody.AddForce(upForce * jumpForce);
+        }
     }
     void flip()
     {
