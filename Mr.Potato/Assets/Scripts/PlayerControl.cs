@@ -10,7 +10,9 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce = 500;
     private float fInput = 0.0f;
     public float maxSpead = 5;
-    private bool bFaceRight = true;
+    [HideInInspector]//公有不显示
+    public bool bFaceRight = true;
+    //[SerializeField]私有可显示
     private bool bGrounded = false;
     Transform mGroundCheck;
     void Start()
