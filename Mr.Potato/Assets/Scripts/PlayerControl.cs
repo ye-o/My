@@ -15,10 +15,12 @@ public class PlayerControl : MonoBehaviour
     //[SerializeField]私有可显示
     private bool bGrounded = false;
     Transform mGroundCheck;
+    private Animator anim;
     void Start()
     {
         heroBody = GetComponent<Rigidbody2D>();
         mGroundCheck = transform.Find("GroundCheck");
+        anim = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -29,6 +31,10 @@ public class PlayerControl : MonoBehaviour
         else if (fInput > 0 && !bFaceRight)
             flip();
         bGrounded = Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        ///if(heroBody .velocity.x > 0.1)
+        {
+            anim.SetFloat("speed", Mathf.Abs(heroBody.velocity.x));
+        }
     }
     private void FixedUpdate()
     {
@@ -41,8 +47,12 @@ public class PlayerControl : MonoBehaviour
         {
             bJump = Input.GetKeyDown(KeyCode.Space);
             Vector2 upForce = new Vector2(0, 1);
-            if(bJump)
+            if (bJump)
+            {
                 heroBody.AddForce(upForce * jumpForce);
+                anim.SetTrigger("Jump");
+            }
+                
         }
     }
     void flip()

@@ -7,11 +7,12 @@ public class Gun : MonoBehaviour
     public Rigidbody2D rocket;
     public float fSpeed = 10;
     PlayerControl playerCtrl;
-
+   // private AudioSource ac;
     // Start is called before the first frame update
     void Start()
     {
         playerCtrl = transform.root.GetComponent<PlayerControl>();
+       // ac = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class Gun : MonoBehaviour
        // if(Input .GetKeyDown (KeyCode.mouse 0))
        if(Input .GetButtonDown("Fire1"))
         {
+           // ac.Play();
             Vector3 direction = new Vector3(0, 0, 0);
             if(playerCtrl .bFaceRight)
             {
