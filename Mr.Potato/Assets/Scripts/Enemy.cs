@@ -9,10 +9,10 @@ public class Enemy : MonoBehaviour
     public Sprite damageEnemy;
     public Sprite deadEnemy;
     public int HP = 2;
-    public float minSpinForce = -200f;
-    public float maxSpinForce = 200f;
+    public float minSpinForce = -200;
+    public float maxSpinForce = 200;
    // public AudioClip[] deathClips;
-    public GameObject UI_100Point;
+    public GameObject UI_100Points;
 
     private Rigidbody2D enemyBody;
     private Transform frontCheck;
@@ -62,14 +62,15 @@ public class Enemy : MonoBehaviour
     void death()
     {
         isDead = true;
+        
         SpriteRenderer[] Sprites = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer s in Sprites)
         {
-            s.enabled = false;
+            if (s.transform.name != "body")
+                s.enabled = false;
         }
 
         curBody.sprite = deadEnemy;
-
         Collider2D[] cols = GetComponents<Collider2D>();
         foreach (Collider2D c in cols)
             c.isTrigger = true;
@@ -80,14 +81,14 @@ public class Enemy : MonoBehaviour
         enemyBody.AddTorque(Random.Range(minSpinForce, maxSpinForce));
         transform.Find("frontCheck").gameObject.SetActive(false);
 
-        if (transform.name == "enemy1")
+        /*if (transform.name == "enemy1")
         {
             transform.Find("eye").GetComponent<SpriteRenderer>().enabled = false;
             transform.Find("eyeid").GetComponent<SpriteRenderer>().enabled = false;
-        }
-        Vector3 UI_100Points = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-        Instantiate(UI_100Point, UI_100Points, Quaternion.identity);// Instantiate(UI_100Point, transform.position, Quaternion.identity);
-        Debug.Log(Quaternion.identity);
+        }*/
+        Vector3 UI100Pos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+       Instantiate(UI_100Points, transform.position, Quaternion.Euler(new Vector3(0,0,0))); //Instantiate(UI_100Points, UI100Pos, Quaternion.identity);
+        // Debug.Log(Quaternion.identity);
     }
     void flip()
     {

@@ -8,6 +8,8 @@ TagManager:
   - wall
   - river
   - HealthBar
+  - BombPickup
+  - ExplosionFX
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - Player
   - Confiner
   - Enemy
-  - 
-  - 
+  - PickUp
+  - Booms
   - 
   - 
   - 

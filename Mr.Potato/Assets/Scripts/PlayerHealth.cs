@@ -9,10 +9,10 @@ public class PlayerHealth : MonoBehaviour
     public  AudioClip[] ouchClips;
     public float damageRepeat = 0.5f;
     public float hurtForce = 1000f;
-    
+    [HideInInspector] public float health = 100f;
+
     private float lastHurt;
     private Animator anim;
-    float health = 100f;
     SpriteRenderer healthbar;
     Vector3 healthBarScale;
 
@@ -68,7 +68,7 @@ public class PlayerHealth : MonoBehaviour
         int i = Random.Range(0, ouchClips.Length);
         AudioSource.PlayClipAtPoint(ouchClips[i], transform.position);
     }
-    void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
         healthbar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);
         healthbar.transform.localScale = new Vector3(health * 0.01f, 1, 1);
