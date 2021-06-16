@@ -210,8 +210,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4886009435379397696, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -292,8 +292,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2465269550769596139, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -374,8 +374,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2162178539329204660, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -486,8 +486,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6553591179306775815, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -531,7 +531,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 556584725532371983}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.0023136}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &556584724923618108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -568,8 +568,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -8138346719408149113, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -613,7 +613,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 556584725532371983}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.712002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &556584725280033924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -650,8 +650,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8343270295017974246, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -732,8 +732,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -1210496423414894039, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -763,6 +763,8 @@ GameObject:
   - component: {fileID: -2999647384146075145}
   - component: {fileID: 6874418706249658091}
   - component: {fileID: 7873244232177784733}
+  - component: {fileID: 9055883116395462741}
+  - component: {fileID: 5432872748116293275}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -829,10 +831,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fabc071d89d97e4588a8875e100dd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 100
-  jumpForce: 500
-  maxSpead: 5
-  bFaceRight: 1
+  facingRight: 1
+  jump: 0
+  moveForce: 365
+  maxSpeed: 8
+  jumpClips:
+  - {fileID: 8300000, guid: 50a8d8a939a0f4e77a0dac6ecd2e582b, type: 3}
+  - {fileID: 8300000, guid: fc55d077383484ac0ad66aa17fcd746f, type: 3}
+  - {fileID: 8300000, guid: dafa1cc4eb8714341a7c595abfba35d8, type: 3}
+  jumpForce: 1000
+  taunts:
+  - {fileID: 8300000, guid: 27cbebf9d650249e5b032494eae5322c, type: 3}
+  - {fileID: 8300000, guid: 986fa1b8984964da79d1be0597332fb2, type: 3}
+  - {fileID: 8300000, guid: 18cb2f6181960417299fa419548cade6, type: 3}
+  - {fileID: 8300000, guid: 0c92f302b5186464187ab9b6adcd1282, type: 3}
+  - {fileID: 8300000, guid: 57d899f9f78ef4493b0b79dbc9d55e40, type: 3}
+  - {fileID: 8300000, guid: 0695e43dc27f94eecbf41013ef61b603, type: 3}
+  - {fileID: 8300000, guid: f00d6706bf8224fe39835855574f94c7, type: 3}
+  - {fileID: 8300000, guid: ddd0ca15e5d0a42b98f08337c1690bb1, type: 3}
+  tauntProbability: 50
+  tauntDelay: 1
 --- !u!95 &905986256
 Animator:
   serializedVersion: 3
@@ -844,8 +862,8 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a59c1a0232b72e645bcc9eb88f97ea23, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
+  m_CullingMode: 1
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -870,7 +888,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4825e9268b7c84159b1f2b9cb54850b1, type: 3}
   - {fileID: 8300000, guid: c6cea8437a02b40b78dfaf913b99be0d, type: 3}
   - {fileID: 8300000, guid: 4baef03e1cc8f4ab69708f3aedbce21c, type: 3}
-  damageRepeat: 0.5
+  damageRepeat: 5
   hurtForce: 100
   health: 100
 --- !u!61 &-2999647384146075145
@@ -928,6 +946,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   riverE: {fileID: 2877968727413376576, guid: c9814460b356b9844853cec20afe53b4, type: 3}
+--- !u!114 &9055883116395462741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556584725532372080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b38f3b78200f340afb0695be0fa57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombLaid: 0
+  bombCount: 0
+  bombsAway: {fileID: 8300000, guid: 2d487c0108565443ba2dea29b521e120, type: 3}
+  bomb: {fileID: 0}
+--- !u!82 &5432872748116293275
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556584725532372080}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &556584725554717829
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +1125,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5416323009033240211, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -1040,7 +1170,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 556584725532371983}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 129.78}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.621689}
 --- !u!212 &556584725559853414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1077,8 +1207,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8725687089874074973, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}
@@ -1159,8 +1289,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2122614165
-  m_SortingLayer: 3
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -1411314250903231168, guid: 1f05369c0aa147845b625ed33efa7088,
     type: 3}

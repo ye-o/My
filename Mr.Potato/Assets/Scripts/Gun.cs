@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
         {
            // ac.Play();
             Vector3 direction = new Vector3(0, 0, 0);
-            if(playerCtrl .bFaceRight)
+            if(playerCtrl .facingRight)
             {
                 Rigidbody2D RocketInstance = Instantiate(rocket, transform.position, Quaternion.Euler(direction));
                 RocketInstance.velocity = new Vector2(fSpeed, 0);

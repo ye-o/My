@@ -50,10 +50,10 @@ TagManager:
   - name: BackGround
     uniqueID: 1838697739
     locked: 0
-  - name: ForeGround
+  - name: Hero
     uniqueID: 769199947
     locked: 0
-  - name: Hero
+  - name: ForeGround
     uniqueID: 2172353131
     locked: 0
   - name: UI

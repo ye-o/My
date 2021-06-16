@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5800000}
   - component: {fileID: 6100000}
   - component: {fileID: 5635179123337875301}
+  - component: {fileID: 8968717052136493645}
   m_Layer: 11
   m_Name: enemy1
   m_TagString: Enemy
@@ -119,7 +120,30 @@ MonoBehaviour:
   HP: 1
   minSpinForce: -200
   maxSpinForce: 200
+  deathClips:
+  - {fileID: 8300000, guid: 039514349165244c6a43be5c3070d14b, type: 3}
+  - {fileID: 8300000, guid: 85020549641fa452d9136ac2fc852efd, type: 3}
+  - {fileID: 8300000, guid: 2e20b5071623f44cf9c72acf016de4b6, type: 3}
   UI_100Points: {fileID: 0}
+--- !u!95 &8968717052136493645
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23a611264a484432f883048aac959e94, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,8 +241,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2012646425
-  m_SortingLayer: 4
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -509950220758283284, guid: 47de97047b0a700469a0b7634d52933e,
     type: 3}
@@ -299,8 +323,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2012646425
-  m_SortingLayer: 4
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -950373999780753032, guid: 47de97047b0a700469a0b7634d52933e,
     type: 3}
@@ -381,8 +405,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2012646425
-  m_SortingLayer: 4
+  m_SortingLayerID: 769199947
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -8200567452704650084, guid: 47de97047b0a700469a0b7634d52933e,
     type: 3}
